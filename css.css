@@ -1,0 +1,455 @@
+html {
+    background: url(pictures/vuotchuongngaivatmain.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+
+    font-family: Tahoma;
+    /*font-weight: 100;*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 0 0 0;
+}
+
+.container {
+    display: block;
+    position: absolute;
+    width: 98%;
+    height: 96%;
+    background-color: transparent;
+    color: white;
+    margin: 15px 15px 15px 15px;
+}
+
+
+/*DANH SÁCH GÓI CÂU HỎI */
+.divbuttonReset {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.buttonReset {
+    display: none; /* Hide button */
+    width: 100%;
+    height: 100%;
+}
+
+.divbuttonReset:hover button {
+    display: block; /* On :hover of div show button */
+}
+
+.container > .ochunhatchinh {
+    display: block;
+    position: absolute;
+    width: 89%;
+    /* height: 83%; */
+    left: 5%;
+    top: 15%;
+    bottom: 2%;
+    right: 5%;
+    background-color: transparent;
+}
+
+.container > .ochunhatchinh > .oGoiCauHoi {
+    display: inline-block;
+    position: relative;
+    width: 18%;
+    height: 182px;
+    line-height: 200px;
+    margin-right: 1%;
+    margin-top: 1%;
+    background-color: white;
+    text-align: center;
+    color: rgb(255, 145, 145);
+    font-size: 100px;
+    text-shadow: rgb(3, 3, 3) 4px 4px 4px;
+    text-decoration:none;
+}
+
+
+/*END GOI CÂU HỎI */
+.container > .homebuttoncontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+}
+.container > .homebuttoncontainer > .image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.container > .homebuttoncontainer > .image:hover {
+    display: inline;
+}
+
+.container > .buttonPictureBase {
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+.container > .buttonPictureBase >.ImageView{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+}
+.buttonViewQuestion{
+    bottom: calc(100% - 70px);;
+    right: calc((100% - 800px - 20px) /2);
+
+
+}
+
+.nextQuestionContainer{
+    top: 0;
+    right: 10px;
+}
+
+
+/*Play music - impotant*/
+.container > .play-music-button {
+    height: 40px;
+    width: 65px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.container > .play-music-button:hover {
+    background-color: rgba(0, 173, 239, 0.9);
+}
+
+.container > .play-music-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 17px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
+
+/*question.php question_area* includes question and countdown clock*/
+.container > .question_area {
+    width: 100%;
+    height: 250px;
+    background-color: transparent; /*always*/
+    position: absolute;
+    bottom: 0;
+}
+
+.container > .question_area > .point_area {
+    width: calc(20%);
+    height: 230px;
+    line-height: 230px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 0;
+    padding: 10px 10px 10px 10px;
+    font-size: 100px;
+    /*font-weight: 900;*/
+    color: white;
+    /*Text effect */
+    color: #FFF05C; /*default value*/
+    background-color: #007192;
+
+}
+
+.container > .question_area > .question_text_area {
+    width: calc(80% - 250px);
+    height: 230px;
+    line-height: 230px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 20%;
+    padding: 10px 10px 10px 10px;
+    font-size: 40px;
+    font-size: 3.5vw;
+    /*Text effect */
+    color: white; /*default value*/
+    background-color: #232323;
+}
+
+.container > .question_area > .question_text_area > .myspan {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+}
+
+.container > .question_countdown_clock_area {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    text-align: center;
+    font-size: 110px;
+    /*circle*/
+    border-radius: 50%;
+    border: 1px solid transparent;
+    /*text Neon*/
+    color: #fff;
+    background-color: #232323;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18
+}
+
+.container > .buttoncongdiem {
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    left: 0;
+    bottom: 170px;
+    background-color: #79b536;
+    color: #fff9ff;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    /*font-weight: 600;*/
+    text-decoration: none;
+    /*Text Shadow*/
+    border: none;
+    cursor: pointer;
+}
+
+.container > .buttoncongdiem:hover {
+
+    background-color: #457e0a;
+    text-decoration: none;
+}
+
+.container > .buttonNumber {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    left: calc((100% - 800px) /2);;
+    bottom: calc(100% - 70px);
+    background-color: #b54b0e;
+    color: #fff9ff;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    /*font-weight: 600;*/
+    text-decoration: none;
+    /*Text Shadow*/
+    border: none;
+    cursor: pointer;
+}
+
+.container > .buttonNumber:hover {
+
+    background-color: #7e0022;
+    text-decoration: none;
+}
+
+
+.container > .buttonNo {
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    left: calc(20% - 80px);
+    bottom: 250px;
+    background-color: #ff4d56;
+    color: #fff9ff;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    /*Text Shadow*/
+    border: none;
+    cursor: pointer;
+}
+
+.container > .buttonNo:hover {
+
+    background-color: #ff0019;
+    text-decoration: none;
+}
+
+
+.cauhoi {
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 780px;
+    height: 135px;
+    top: 70px;
+    left: calc((100% - 800px) /2);
+    padding: 10px;
+    border: 3px solid rgba(68,237,88,1);
+    font: normal normal bold 26px/1 Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: justify;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background-color: white;
+}
+
+.choiceBase {
+    position: absolute;
+    top: 300px;
+
+    width: 310px;
+    height:100px;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 4px solid #018dc4;
+    -webkit-border-radius: 23px;
+    border-radius: 23px;
+    font: normal 20px/normal "Times New Roman", Times, serif;
+    color: rgba(10,10,10,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-align: center;
+    background: #ffffff;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.choiceA {
+    left: calc((100% - 800px) /2);
+    top: 280px;
+}
+
+.choiceB {
+    right: calc((100% - 800px - 20px) /2 + 20px);
+    top: 280px;
+}
+
+.choiceC {
+    left: calc((100% - 800px) /2);
+    top: 440px;
+}
+
+.choiceD {
+    right: calc((100% - 800px - 20px) /2 + 20px);
+    top: 440px;
+}
+
+.letterbase {
+    position: absolute;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: normal normal bold 32px/1 "amaranth", Helvetica, sans-serif;
+    color: #b309ff;
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background-color: white;
+}
+
+.letterA{
+    top: 250px;
+    left: calc((100% - 800px) /2 + 10px);
+}
+
+.letterB{
+    top: 250px;
+    right: calc((100% - 800px - 20px) /2 + 330px);
+
+}
+
+.letterC{
+    top: 410px;
+    left: calc((100% - 800px) /2 + 10px);
+}
+
+.letterD{
+    top: 410px;
+    right: calc((100% - 800px - 20px) /2 + 330px);
+}
+
+.container > .point_area {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 0;
+    padding: 10px 10px 10px 10px;
+    font-size: 90px;
+    /*font-weight: 900;*/
+    color: white;
+    /*Text effect */
+    color: #FFF05C; /*default value*/
+    background-color: #007192;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

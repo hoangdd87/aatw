@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Gói câu hỏi <?= $magoi ?></title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="dsgoicauhoi.html" class="homebuttoncontainer">
+        <img alt="Home" src="pictures/Home-icon.png" class="image">
+    </a>
+
+    <button class="buttonPictureBase nextQuestionContainer" id="nextQuestion" onclick="clickButtonNext()">
+        <img alt="view" src="pictures/next_button.svg.med.png" class="ImageView">
+    </button>
+
+    <button id="socau" style="visibility: visible" class="buttonNumber" onclick="buttonPointClick() ">
+        1
+    </button>
+
+    <button class="buttonPictureBase buttonViewQuestion" id="viewQuestion" onclick="vietnoidungcauhoi()">
+        <img alt="view" src="pictures/view.png" class="ImageView">
+    </button>
+
+    <div id="ndcauhoi" class="cauhoi"></div>
+    <Span class="letterbase letterA">A</Span>
+    <Span class="letterbase letterB">B</Span>
+    <button id="A" class="choiceBase choiceA" onclick="choiceSelected('A')"></button>
+    <button id="B" class="choiceBase choiceB" onclick="choiceSelected('B')"></button>
+    <Span class="letterbase letterC">C</Span>
+    <Span class="letterbase letterD">D</Span>
+    <button id="C" class="choiceBase choiceC" onclick="choiceSelected('C')"></button>
+    <button id="D" class="choiceBase choiceD" onclick="choiceSelected('D')"></button>
+
+
+    <button class="buttoncongdiem" onclick="congdiem()">
+        +
+    </button>
+
+    <div id="diem" class="point_area">
+        0
+    </div>
+
+    <div id='thoigian' class="question_countdown_clock_area">
+        10
+    </div>
+
+    <button id="buttoncountdown" class="play-music-button" onclick="PlayCountdownButton()">
+    </button>
+
+
+    <audio id="khoidong" src="sounds/khoidong.mp3" autoplay></audio>
+    <audio id="60s" src="sounds/60s.mp4"></audio>
+    <audio id="15s" src="sounds/15s.mp4"></audio>
+    <audio id="10s" src="sounds/10s.mp4"></audio>
+    <audio id="dung" src="sounds/dung.wav"></audio>
+    <audio id="sai" src="sounds/sai.wav"></audio>
+    <audio id="chucmung" src="sounds/chucmung.wav"></audio>
+    <audio id="traloidung" src="sounds/traloidung.wav"></audio>
+    <audio id="mcchuanbidoccauhoi" src="sounds/mcchuanbidoccauhoi.wav"></audio>
+</div>
+<script>
+
+    function xoanoidungcauhoi() {
+        document.getElementById("ndcauhoi").innerHTML = "";
+        document.getElementById("A").innerHTML = "";
+        document.getElementById("B").innerHTML = "";
+        document.getElementById("C").innerHTML = "";
+        document.getElementById("D").innerHTML = "";
+
+    }
+
+    function vietnoidungcauhoi() {
+        document.getElementById("ndcauhoi").innerHTML = cauhoihientai.ndcauhoi;
+        document.getElementById("A").innerHTML = cauhoihientai.luachona;
+        document.getElementById("B").innerHTML = cauhoihientai.luachonb;
+        document.getElementById("C").innerHTML = cauhoihientai.luachonc;
+        document.getElementById("D").innerHTML = cauhoihientai.luachond;
+
+    }
+
+    function vietthoigian() {
+        document.getElementById("thoigian").innerHTML = cauhoihientai.thoigian;
+    }
+
+    function makewhiteallchoise() {
+        document.getElementById("A").style.backgroundColor = "white";
+        document.getElementById("B").style.backgroundColor = "white";
+        document.getElementById("C").style.backgroundColor = "white";
+        document.getElementById("D").style.backgroundColor = "white";
+    }
+
+
+    var dscauhoi = [
+        {
+            "magoi": "1",
+            "caccauhoi": [
+                {
+                    "macauhoi": "1",
+                    "ndcauhoi": "Câu 1	Vòng quay vốn lưu động của một doanh nghiệp sản xuất kinh doanh là thương số giữa:",
+                    "thoigian": "10",
+                    "luachona": "Doanh thu thuần và tổng tài sản bình quân",
+                    "luachonb": "Doanh thu thuần và nợ ngắn hạn",
+                    "luachonc": "Doanh thu thuần và vốn chủ sở hữu bình quân",
+                    "luachond": "Doanh thu thuần và tài sản ngắn hạn bình quân",
+                    "dapan": "D",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "2",
+                    "ndcauhoi": "Câu 2	Hiện nay người Việt Nam khi đi nước ngoài công tác, du lịch có thể mang bao nhiêu USD bằng tiền mặt mà không phải khai báo?",
+                    "thoigian": "10",
+                    "luachona": "5.000 USD",
+                    "luachonb": "6.000 USD",
+                    "luachonc": "7.000 USD",
+                    "luachond": "8.000 USD",
+                    "dapan": "A",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "3",
+                    "ndcauhoi": "Câu 3	Theo UCP 600, bảo hiểm tối thiểu trong chứng từ bảo hiểm là bao nhiêu khi trị giá của tín dụng thư là 550.000 USD và trị giá của Hoá đơn thương mại có các thông tin sau: Tổng trị giá mua hàng là 1.100.000,00 USD, Trừ thanh toán trả trước là 550.000,00 USD, Phần còn lại thuần theo LC là 550.000,00 USD",
+                    "thoigian": "10",
+                    "luachona": "1.210.000,00 USD",
+                    "luachonb": "605.000,00USD",
+                    "luachonc": "550.000,00 USD",
+                    "luachond": "710.000,00 USD",
+                    "dapan": "A",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "4",
+                    "ndcauhoi": "Câu 4	Theo quy định của pháp luật, trường hợp Ngân hàng cho vay và bên bảo đảm không thỏa thuận trong hợp đồng đảm bảo về phương thức xử lý đối với TSĐB là Quyền sử dụng đất thì tài sản được xử lý như sau:",
+                    "thoigian": "10",
+                    "luachona": "Ngân hàng cho vay định giá và nhận chính TSĐB đó thay thế cho nghĩa vụ trả nợ",
+                    "luachonb": "Ngân hàng cho vay trực tiếp bán đấu giá TSĐB",
+                    "luachonc": "Các bên thực hiện bán đấu giá TSĐB",
+                    "luachond": "Không trường hợp nào đúng",
+                    "dapan": "C",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "5",
+                    "ndcauhoi": "Câu 5	………….. is a contract that determines for how long you can stay at the place you are renting and how much you have to pay",
+                    "thoigian": "10",
+                    "luachona": "Document",
+                    "luachonb": "Lease",
+                    "luachonc": "Loan",
+                    "luachond": "License",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "6",
+                    "ndcauhoi": "",
+                    "thoigian": "60",
+                    "luachona": "",
+                    "luachonb": "",
+                    "luachonc": "",
+                    "luachond": "",
+                    "dapan": "",
+                    "diemso": "10"
+                }
+            ]
+        },
+        {
+            "magoi": "2",
+            "caccauhoi": [
+                {
+                    "macauhoi": "1",
+                    "ndcauhoi": "Câu 1	Hình thức thanh toán nào sau đây sẽ không phù hợp khi thanh toán khác địa bàn, khác hệ thống ngân hàng?",
+                    "thoigian": "10",
+                    "luachona": "Thanh toán bù trừ",
+                    "luachonb": "Thanh toán điện tử liên ngân hàng",
+                    "luachonc": "Thanh toán qua tài khoản tiền gửi Ngân hàng Nhà nước",
+                    "luachond": "Thanh toán qua tài khoản tiền gửi tại Ngân hàng thương mại khác",
+                    "dapan": "A",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "2",
+                    "ndcauhoi": "Câu 2	Ngân hàng sẽ đánh giá khả năng tài chính của doanh nghiệp tốt nếu doanh nghiệp có một trong các yếu tố sau?",
+                    "thoigian": "10",
+                    "luachona": "Tỷ lệ lợi nhuận doanh thu ROS cao hơn và hệ số thanh toán lãi vay thấp hơn mức trung bình của ngành.",
+                    "luachonb": "Tỷ lệ lợi nhuận vốn chủ sở hữu ROE cao hơn và hệ số nợ thấp hơn mức trung bình của ngành.",
+                    "luachonc": "Tỷ lệ vòng quay tài sản thấp hơn và hệ số tự tài trợ tài sản cố định cao hơn mức trung bình của ngành.",
+                    "luachond": "Tỷ lệ vòng quay hàng tồn kho thấp hơn và hệ số nợ cao hơn mức trung bình của ngành.",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "3",
+                    "ndcauhoi": "Câu 3	Dựa trên điều khoản của UCP 600 qui định về vận đơn đường biển (Ocean Bill of lading), câu nào dưới đây đúng cho khi định nghĩa chuyển tải hàng?",
+                    "thoigian": "10",
+                    "luachona": "Dỡ hàng hoặc tái xếp hàng từ một phương thức vận chuyển này đến một phương thức khác trong suốt tiến trình vận chuyển.",
+                    "luachonb": "Dỡ hàng hoặc tái xếp hàng từ một con tàu này đến một con tàu khác trong suốt hành trình chuyên chở hàng bằng đường biển từ cảng xếp hàng đến cảng cuối cùng.",
+                    "luachonc": "Dỡ hàng hoặc tái xếp hàng từ một phương thức vận chuyển này đến một phương thức vận chuyển khác trong các hình thức vận chuyển khác nhau trong suốt tiến trình chuyên chở.",
+                    "luachond": "Dỡ hàng hoặc tái dỡ hàng từ một số phương tiện vận chuyển này đến phương tiện vận chuyển khác trong suốt tiến trình vận chuyển.",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "4",
+                    "ndcauhoi": "Câu 4	Trong cho vay tiêu dùng cá nhân, khi tiến hành thẩm định hồ sơ vay, yếu tố nào là quan trọng nhất để quyết định cho vay:",
+                    "thoigian": "10",
+                    "luachona": "Khách hàng cam kết sẽ trả nợ đầy đủ, đúng hạn",
+                    "luachonb": "Có nguồn thu nhập ổn định đảm bảo cuộc sống và muc đích vay phục vụ nhu cầu cá nhân",
+                    "luachonc": "Khách hàng làm việc tại một doanh nghiệp lớn, tính chất công việc áp lực cao",
+                    "luachond": "Khách hàng có người thứ ba cam kết sẽ trả nợ thay nếu khách hàng không trả được nợ",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "5",
+                    "ndcauhoi": "Câu 5	Uranium, …………………..., is an exceedingly rale and pontentially dangerous element.",
+                    "thoigian": "10",
+                    "luachona": "To found in trace quantities",
+                    "luachonb": "Found in trace quantities",
+                    "luachonc": "Finding in trace quantities",
+                    "luachond": "To be found in trace quantities",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "6",
+                    "ndcauhoi": "",
+                    "thoigian": "60",
+                    "luachona": "",
+                    "luachonb": "",
+                    "luachonc": "",
+                    "luachond": "",
+                    "dapan": "",
+                    "diemso": "20"
+                }
+            ]
+        },
+        {
+            "magoi": "3",
+            "caccauhoi": [
+                {
+                    "macauhoi": "1",
+                    "ndcauhoi": "Hệ thống tài khoản kế toán của các Tổ chức tín dụng chia làm mấy loại:?",
+                    "thoigian": "10",
+                    "luachona": "7",
+                    "luachonb": "8",
+                    "luachonc": "9",
+                    "luachond": "10",
+                    "dapan": "C",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "2",
+                    "ndcauhoi": "Câu 2	Theo Luật các tổ chức tín dụng, tổng dư nợ cho vay của tổ chức tín dụng đối với một khách hàng không được vượt quá:",
+                    "thoigian": "10",
+                    "luachona": "15% vốn tự có của tổ chức tín dụng",
+                    "luachonb": "15% vốn điều lệ của tổ chức tín dụng",
+                    "luachonc": "15% vốn pháp định của tổ chức tín dụng",
+                    "luachond": "25% vốn tự có của tổ chức tín dụng",
+                    "dapan": "A",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "3",
+                    "ndcauhoi": "Câu 3	Theo UCP 600 chứng từ bảo hiểm phải được phát hành bằng loại tiền nào?",
+                    "thoigian": "10",
+                    "luachona": "Ghi trên hóa đơn thương mại",
+                    "luachonb": "Ghi trong hợp đồng thương mại",
+                    "luachonc": "Theo quy định của LC",
+                    "luachond": "Do người mua bảo hiểm chọn",
+                    "dapan": "C",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "4",
+                    "ndcauhoi": "Câu 4	Khi nào thì Ngân hàng áp dụng biện pháp xử lý TSBĐ để thu hồi nợ?",
+                    "thoigian": "10",
+                    "luachona": "Khách hàng có nguồn thu khác ngòai nguồn thu từ bán tài sản bảo đảm để trả nợ Ngân hàng",
+                    "luachonb": "Ngân hàng đã đôn đốc, nhắc nợ, tạo điều kiện cho Khách hàng tự bán tài sản bảo đảm để trả nợ nhưng Khách hàng không hợp tác",
+                    "luachonc": "Khách hàng đề nghị đổi tài sản bảo đảm và giá trị tài sản bảo đảm thay thế đủ đảm bảo cho khỏan vay",
+                    "luachond": "Khách hàng có thiện chí trả nợ Ngân hàng và đang trả nợ dần hàng tháng theo cam kết",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "5",
+                    "ndcauhoi": "Câu 5	After their house had been ……………..., they decided to sell it and buy a bigger one.",
+                    "thoigian": "10",
+                    "luachona": "Prized",
+                    "luachonb": "Pricedp",
+                    "luachonc": "Cost",
+                    "luachond": "Valued",
+                    "dapan": "D",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "6",
+                    "ndcauhoi": "",
+                    "thoigian": "60",
+                    "luachona": "",
+                    "luachonb": "",
+                    "luachonc": "",
+                    "luachond": "",
+                    "dapan": "",
+                    "diemso": "20"
+                }
+            ]
+        },
+        {
+            "magoi": "4",
+            "caccauhoi": [
+                {
+                    "macauhoi": "1",
+                    "ndcauhoi": "Câu 1	Đối tượng nào được gửi tiết kiệm tại Ngân hàng:",
+                    "thoigian": "10",
+                    "luachona": "Cá nhân",
+                    "luachonb": "Tổ chức",
+                    "luachonc": "Cá nhân và Tổ chức",
+                    "luachond": "Tổ chức tín dụng",
+                    "dapan": "A",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "2",
+                    "ndcauhoi": "Câu 2	Mục đích của đăng ký giao dịch bảo đảm tiền vay là:",
+                    "thoigian": "10",
+                    "luachona": "Công khai hóa các giao dịch đảm bảo cho mọi cá nhân, tổ chức có nhu cầu tìm hiểu.",
+                    "luachonb": "Bảo vệ quyền và lợi ích hợp pháp của các bên trong giao dịch đảm bảo.",
+                    "luachonc": "Xác định thứ tự ưu tiên thanh toán giữa các bên trong giao dịch đảm bảo.",
+                    "luachond": "Đảm bảo tính hợp pháp của hợp đồng cầm cố, thế chấp",
+                    "dapan": "C",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "3",
+                    "ndcauhoi": 'Câu 3	Điều 30 UCP 600 quy định các từ "khoảng" hoặc "approximate" được dùng để chỉ số lượng ghi trong LC phải được hiểu như thế nào?',
+                    "thoigian": "10",
+                    "luachona": "Cho phép một dung sai trên hoặc dưới 5 phần trăm",
+                    "luachonb": "Cho phép một dung sai trên hoặc dưới 7 phần trăm",
+                    "luachonc": "Cho phép một dung sai trên hoặc dưới 10 phần trăm",
+                    "luachond": "Cho phép một dung sai trên hoặc dưới 15 phần trăm",
+                    "dapan": "C",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "4",
+                    "ndcauhoi": "Câu 4	Tín dụng ngắn hạn là việc Ngân hàng sử dụng nguốn vốn tự có; nguồn huy động để cho các chủ thể có nhu cầu vốn vay, thu hồi vốn gốc và lãi với thời hạn:",
+                    "thoigian": "10",
+                    "luachona": "≤ 6 tháng",
+                    "luachonb": "≤ 12 tháng",
+                    "luachonc": "≤ 18 tháng",
+                    "luachond": "≤ 24 tháng",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "5",
+                    "ndcauhoi": "Câu 5	The first customer ………………... this morning was quite rude.",
+                    "thoigian": "10",
+                    "luachona": "Dealing with",
+                    "luachonb": "With whom we dealt",
+                    "luachonc": "To deal with",
+                    "luachond": "dealt with",
+                    "dapan": "B",
+                    "diemso": "20"
+                },
+                {
+                    "macauhoi": "6",
+                    "ndcauhoi": "",
+                    "thoigian": "60",
+                    "luachona": "",
+                    "luachonb": "",
+                    "luachonc": "",
+                    "luachond": "",
+                    "dapan": "",
+                    "diemso": "20"
+                }
+            ]
+        }
+
+    ];
+
+    var queryDict = {}
+    location.search.substr(1).split("&").forEach(function (item) {
+        queryDict[item.split("=")[0]] = item.split("=")[1]
+    });
+    var magoi = queryDict['magoi'];
+    magoi = (typeof magoi !== 'undefined') ? magoi : 0;
+
+    var dscauhoicuagoi = (dscauhoi[magoi]).caccauhoi;
+    var cauhoihientai = dscauhoicuagoi[0];
+    var sottcauhientai = 1;
+    var diem = 0;
+    //xoa noi dung cau hoi lan dau
+    xoanoidungcauhoi();
+    //xac dinh thoi gian cau hoi tai;
+    vietthoigian();
+
+
+    var sound60s = document.getElementById("60s");
+    var sound15s = document.getElementById("15s");
+    var sound10s = document.getElementById("10s");
+    var soundmcchuanbidoccauhoi = document.getElementById("mcchuanbidoccauhoi");
+    var soundung = document.getElementById("dung");
+    var soundsai = document.getElementById("sai");
+</script>
+
+<script>
+    function clickButtonNext() {
+        sottcauhientai = sottcauhientai + 1;
+
+        if (sottcauhientai <= dscauhoicuagoi.length) {
+            document.getElementById('socau').innerHTML = sottcauhientai;
+            cauhoihientai = dscauhoicuagoi[sottcauhientai - 1];
+            xoanoidungcauhoi();
+            vietthoigian();
+            soundmcchuanbidoccauhoi.play();
+            makewhiteallchoise();
+
+        }
+        document.getElementById("buttoncountdown").style.display = 'visible';
+    }
+
+    function choiceSelected(choice) {
+        if (choice == cauhoihientai.dapan) {
+            document.getElementById(choice).style.backgroundColor = "green";
+            soundung.play();
+
+        } else {
+            document.getElementById(choice).style.backgroundColor = "red";
+            soundsai.play();
+        }
+
+    }
+
+    function PlayCountdownButton() {
+        //vietnoidungcauhoi();
+        //Play music sound
+        var thoigian = parseInt(cauhoihientai.thoigian);
+        var sound;
+        if (thoigian == 10) {
+            sound = sound10s;
+        } else if (thoigian == 60) {
+            sound = sound60s;
+        } else {
+            sound = sound15s;
+        }
+        sound.play();
+        //hide button play countdown
+        document.getElementById("buttoncountdown").style.display = 'none';
+
+        function updateClock() {
+
+            thoigian = thoigian - 1;
+            document.getElementById("thoigian").innerHTML = thoigian;
+            if (thoigian <= 0) {
+                //sound.pause();
+                clearInterval(timeinterval);
+                document.getElementById("buttoncountdown").style.display = 'inline';
+            }
+        }
+
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+
+    function congdiem() {
+        if (sottcauhientai <= dscauhoicuagoi.length) {
+
+            diem = diem + parseInt(cauhoihientai.diemso);
+            document.getElementById('diem').innerHTML = diem;
+
+            var soundtraloidung = document.getElementById("traloidung");
+            soundtraloidung.play();
+        }
+        else {
+            //sound.pause();
+            //clearInterval()
+        }
+    }
+
+    function buttonPointClick() {
+        var soundchucmung = document.getElementById("chucmung");
+        soundchucmung.play();
+    }
+
+
+</script>
+
+</body>
+
+</html>
