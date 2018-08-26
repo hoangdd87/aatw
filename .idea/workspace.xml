@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3282aad7-4787-4b7b-b5f6-658e2d2148d9" name="Default" comment="" />
+    <list default="true" id="3282aad7-4787-4b7b-b5f6-658e2d2148d9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dscauhoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/dscauhoi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,24 +15,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="dsgoicauhoi.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="dsgoicauhoi.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dsgoicauhoi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="161" column="5" lean-forward="true" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
+            <state relative-caret-position="109">
+              <caret line="133" column="10" selection-start-line="55" selection-start-column="8" selection-end-line="133" selection-end-column="10" />
               <folding>
-                <element signature="e#1505#3384#0" />
+                <element signature="e#1529#3302#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="css.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+            <state relative-caret-position="660">
+              <caret line="450" lean-forward="true" selection-start-line="450" selection-end-line="450" />
             </state>
           </provider>
         </entry>
@@ -35,8 +40,38 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="75" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="75" />
+            <state relative-caret-position="679">
+              <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dscauhoi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dscauhoi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="1192" column="8" selection-start-line="1192" selection-start-column="8" selection-end-line="1192" selection-end-column="8" />
+              <folding>
+                <element signature="e#4211#4719#0" />
+                <element signature="e#4737#5444#0" />
+                <element signature="e#5462#6190#0" />
+                <element signature="e#9832#14152#0" />
+                <element signature="e#14162#17483#0" />
+                <element signature="e#17493#20791#0" />
+                <element signature="e#20801#24099#0" />
+                <element signature="e#24113#30403#0" />
+                <element signature="e#24790#25296#0" />
+                <element signature="e#26037#26763#0" />
+                <element signature="e#30413#34733#0" />
+                <element signature="e#34743#38064#0" />
+                <element signature="e#38074#41372#0" />
+                <element signature="e#41382#44685#0" />
+                <element signature="e#44714#48013#0" />
+                <element signature="e#48007#51306#0" />
+                <element signature="e#51316#54615#0" />
+                <element signature="e#54625#57924#0" />
+                <element signature="e#57934#61233#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,15 +82,31 @@
     <findStrings>
       <find>dsgoicauhoi</find>
       <find>var</find>
+      <find />
+      <find>20</find>
+      <find>&quot;20&quot;</find>
+      <find />
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
+      <replace />
+      <replace>10</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
       <command text="lite-server" />
+      <command text="git init" />
+      <command text="git add ." />
+      <command text="git commit -m 'first'" />
+      <command text="git remote add origin https://github.com/hoangdd87/aatw.git" />
+      <command text="git push -u origin master" />
+      <command text="lite-server" />
     </commandsHistory>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
@@ -63,9 +114,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css.css" />
         <option value="$PROJECT_DIR$/dsgoicauhoi.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/dscauhoi.html" />
+        <option value="$PROJECT_DIR$/css.css" />
       </list>
     </option>
   </component>
@@ -79,9 +131,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="23" />
-    <option name="width" value="956" />
+    <option name="x" value="1682" />
+    <option name="y" value="88" />
+    <option name="width" value="420" />
     <option name="height" value="983" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -98,6 +150,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -146,37 +199,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535206246829</updated>
-      <workItem from="1535206248803" duration="6719000" />
+      <workItem from="1535206248803" duration="8019000" />
+      <workItem from="1535243215610" duration="3420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6719000" />
+    <option name="totallyTimeSpent" value="11439000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="23" width="956" height="983" extended-state="0" />
+    <frame x="205" y="88" width="1897" height="983" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.18591858" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="7" visible="true" weight="0.18591858" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12598841" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,28 +239,113 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/dsgoicauhoi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="75" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="75" />
+        <state relative-caret-position="825">
+          <caret line="133" column="10" selection-start-line="55" selection-start-column="8" selection-end-line="133" selection-end-column="10" />
+          <folding>
+            <element signature="e#1529#3302#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="825">
           <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dscauhoi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#4211#4719#0" />
+            <element signature="e#4737#5444#0" />
+            <element signature="e#5462#6190#0" />
+            <element signature="e#9832#14152#0" />
+            <element signature="e#14162#17483#0" />
+            <element signature="e#17493#20791#0" />
+            <element signature="e#20801#24099#0" />
+            <element signature="e#24113#30403#0" />
+            <element signature="e#24790#25296#0" />
+            <element signature="e#26037#26763#0" />
+            <element signature="e#30413#34733#0" />
+            <element signature="e#34743#38064#0" />
+            <element signature="e#38074#41372#0" />
+            <element signature="e#41382#44685#0" />
+            <element signature="e#44714#48013#0" />
+            <element signature="e#48007#51306#0" />
+            <element signature="e#51316#54615#0" />
+            <element signature="e#54625#57924#0" />
+            <element signature="e#57934#61233#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dsgoicauhoi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="161" column="5" lean-forward="true" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
+        <state relative-caret-position="109">
+          <caret line="133" column="10" selection-start-line="55" selection-start-column="8" selection-end-line="133" selection-end-column="10" />
           <folding>
-            <element signature="e#1505#3384#0" />
+            <element signature="e#1529#3302#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dscauhoi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="1192" column="8" selection-start-line="1192" selection-start-column="8" selection-end-line="1192" selection-end-column="8" />
+          <folding>
+            <element signature="e#4211#4719#0" />
+            <element signature="e#4737#5444#0" />
+            <element signature="e#5462#6190#0" />
+            <element signature="e#9832#14152#0" />
+            <element signature="e#14162#17483#0" />
+            <element signature="e#17493#20791#0" />
+            <element signature="e#20801#24099#0" />
+            <element signature="e#24113#30403#0" />
+            <element signature="e#24790#25296#0" />
+            <element signature="e#26037#26763#0" />
+            <element signature="e#30413#34733#0" />
+            <element signature="e#34743#38064#0" />
+            <element signature="e#38074#41372#0" />
+            <element signature="e#41382#44685#0" />
+            <element signature="e#44714#48013#0" />
+            <element signature="e#48007#51306#0" />
+            <element signature="e#51316#54615#0" />
+            <element signature="e#54625#57924#0" />
+            <element signature="e#57934#61233#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="450" lean-forward="true" selection-start-line="450" selection-end-line="450" />
         </state>
       </provider>
     </entry>
